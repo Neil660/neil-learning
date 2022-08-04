@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Decription
+ * @Decription 生成product的抽象类，角色--创建者（框架）
  * @Author Huang Chengyi
  * @Date 2022/8/2 14:36
  * @Version 1.0
@@ -20,20 +20,3 @@ public abstract class Factory {
     protected abstract void registerProduct(Product product);
 }
 
-class IDCardFactory extends Factory {
-    private List owners = new ArrayList();
-
-    @Override
-    protected Product createProduct(String owner) {
-        return new IDCard(owner);
-    }
-
-    @Override
-    protected void registerProduct(Product product) {
-        owners.add(((IDCard) product).getOwner());
-    }
-
-    public List getOwners() {
-        return owners;
-    }
-}

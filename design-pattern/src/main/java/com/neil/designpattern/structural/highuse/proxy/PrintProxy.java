@@ -1,7 +1,7 @@
 package com.neil.designpattern.structural.highuse.proxy;
 
 /**
- * @Decription 打印机的代理
+ * @Decription 打印机的代理。角色--代理人
  * 尽量处理来自客户的需求，只有当自己不能处理时，才会交给实际主体Printer处理，只有在必要时才会生成Printer
  * @Author Huang Chengyi
  * @Date 2022/8/3 15:47
@@ -9,6 +9,7 @@ package com.neil.designpattern.structural.highuse.proxy;
  */
 public class PrintProxy implements Printable {
     private String name;
+
     private Printer real; // 本人
 
     public PrintProxy() {}

@@ -1,7 +1,7 @@
 package com.neil.designpattern.creational.highuse.builder;
 
 /**
- * @Decription 具体的建造者。
+ * @Decription 角色--具体的建造者。
  * @Author Huang Chengyi
  * @Date 2022/8/3 16:20
  * @Version 1.0

@@ -1,7 +1,7 @@
 package com.neil.designpattern.structural.highuse.adapter;
 
 /**
- * @Decription 客户需求5V电压
+ * @Decription 客户需求5V电压。角色--对象
  * @Author Huang Chengyi
  * @Date 2022/8/3 15:32
  * @Version 1.0

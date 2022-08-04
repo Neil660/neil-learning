@@ -1,7 +1,7 @@
 package com.neil.designpattern.creational.highuse.builder;
 
 /**
- * @Decription 监工。负责使用Builder角色的API来生成实例
+ * @Decription 角色--监工。负责使用Builder角色的API来生成实例
  * @Author Huang Chengyi
  * @Date 2022/8/2 14:02
  * @Version 1.0
