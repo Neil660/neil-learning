@@ -64,12 +64,6 @@
         </dependency>
 
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.alibaba.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
             <version>${rocketmq.client.version}</version>
@@ -111,8 +105,9 @@
         </plugins>
     </build>
     <modules>
-        <module>eureka-server</module>
         <module>design-pattern</module>
+        <module>neil-consumer</module>
+        <module>eureka-server</module>
     </modules>
     <repositories>
         <repository>
