@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neil.common.dao.TestTableMapper">
+    <insert id="addTestTable" parameterType="com.neil.common.model.TestTable">
+        insert into test_table(id, action, name) values (#{id}, #{action}, #{name})
+    </insert>
+
+    <!-- 使用MAP时，tableId是key -->
+    <insert id="addTestTable2">
+        insert into test_table(id, action, name) values (#{tableId}, #{tableAction}, #{tableName})
+    </insert>
+
+    <select id="getTestTableById" parameterType="int" resultType="com.neil.common.model.TestTable">
+        select * from test_table where id = #{id}
+    </select>
+
+    <!-- 基本类型的parameterType可以省略 -->
+    <select id="getTestTableByName" resultType="com.neil.common.model.TestTable">
+        select * from test_table where name like "%"#{name}"%"
+    </select>
+
+    <!-- 即使是List类型，resultType也是直接使用对象 -->
+    <select id="getTestTable" resultType="com.neil.common.model.TestTable">
+        select * from test_table
+    </select>
+
+</mapper>

@@ -24,9 +24,14 @@ public class TestController {
     @Autowired
     TestService service;
 
-    @RequestMapping(value = "/getAllInfos")
-    public List<TestTable> getAllInfos() {
-        return service.getTestTable();
+    @RequestMapping(value = "/addTestTable")
+    public int addTestTable(@RequestParam("testTable") TestTable testTable) {
+        return service.addTestTable(testTable);
+    }
+
+    @RequestMapping(value = "/addTestTable2")
+    public int addTestTable2() {
+        return service.addTestTable2();
     }
 
     @RequestMapping(value = "/getById/{id}")
@@ -34,13 +39,13 @@ public class TestController {
         return service.getTestTableById(id).toString();
     }
 
-/*    @RequestMapping(value = "/getById")
-    public String getById2(@RequestParam("id") int id) {
-        return service.getTestTableById(id).toString();
-    }*/
+    @RequestMapping(value = "/getByName/{name}")
+    public List<TestTable> getByName(@PathVariable String name) {
+        return service.getTestTableByName(name);
+    }
 
-    @RequestMapping(value = "/addTestTable")
-    public int addTestTable(@RequestParam("testTable") TestTable testTable) {
-        return service.addTestTable(testTable);
+    @RequestMapping(value = "/getAllInfos")
+    public List<TestTable> getAllInfos() {
+        return service.getTestTable();
     }
 }
