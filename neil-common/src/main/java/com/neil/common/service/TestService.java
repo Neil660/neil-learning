@@ -1,6 +1,7 @@
 package com.neil.common.service;
 
 import com.neil.common.model.TestTable;
+import org.apache.ibatis.io.ResolverUtil.Test;
 
 import java.util.List;
 import java.util.Map;
@@ -21,4 +22,6 @@ public interface TestService {
     List<TestTable> getTestTableByName(String name);
 
     List<TestTable> getTestTable();
+
+    List<TestTable> get();
 }

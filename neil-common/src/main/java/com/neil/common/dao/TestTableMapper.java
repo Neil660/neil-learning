@@ -24,5 +24,5 @@ public interface TestTableMapper {
 
     List<TestTable> getTestTable();
 
-
+    List<TestTable> dynamicSqlQuery(Map<String, Object> map);
 }

@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -51,5 +53,20 @@ public class TestServiceImpl implements TestService {
     @Override
     public List<TestTable> getTestTable() {
         return testTableMapper.getTestTable();
+    }
+
+    @Override
+    public List<TestTable> get() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", new SecureRandom().nextInt(10000));
+        map.put("action", "tableaction");
+        map.put("name", "tableName");
+        map.put("type", "1");
+        List<Integer> item = new ArrayList<>();
+        for (int i = 0; i < 7000; i++) {
+            item.add(i);
+        }
+        map.put("list", item);
+        return testTableMapper.dynamicSqlQuery(map);
     }
 }

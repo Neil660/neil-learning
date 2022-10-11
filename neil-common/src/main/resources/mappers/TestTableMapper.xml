@@ -2,7 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.neil.common.dao.TestTableMapper">
-    <insert id="addTestTable" parameterType="com.neil.common.model.TestTable">
+    <!--开启全局的二级缓存：基于命名空间，会话关闭也会存储-->
+    <!--
+        LRU – 最近最少使用：移除最长时间不被使用的对象。
+        FIFO – 先进先出：按对象进入缓存的顺序来移除它们。
+        SOFT – 软引用：基于垃圾回收器状态和软引用规则移除对象。
+        WEAK – 弱引用：更积极地基于垃圾收集器状态和弱引用规则移除对象。
+    -->
+    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="false"/>
+
+    <insert id="addTestTable" parameterType="TestTable">
         insert into test_table(id, action, name) values (#{id}, #{action}, #{name})
     </insert>
 
@@ -11,7 +20,17 @@
         insert into test_table(id, action, name) values (#{tableId}, #{tableAction}, #{tableName})
     </insert>
 
-    <select id="getTestTableById" parameterType="int" resultType="com.neil.common.model.TestTable">
+    <!--
+        flushCache=true:本地缓存和二级缓存被清空
+        useCache=true:致本条语句的结果被二级缓存缓存起来
+        timeout:在抛出异常之前，驱动程序等待数据库返回请求结果的秒数
+        fetchSize:驱动的建议值，尝试让驱动程序每次批量返回的结果行数等于这个设置值
+        statementType:会让 MyBatis 分别使用 Statement，PreparedStatement 或 CallableStatement，默认值：PREPARED
+        resultSetType:FORWARD_ONLY，SCROLL_SENSITIVE, SCROLL_INSENSITIVE 或 DEFAULT（等价于 unset） 中的一个，默认值为 unset （依赖数据库驱动）
+        resultOrdered=true:假设结果集以正确顺序（排序后）执行映射，当返回新的主结果行时，将不再发生对以前结果行的引用
+        resultSets:将列出语句执行后返回的结果集并赋予每个结果集一个名称，多个名称之间以逗号分隔
+    -->
+    <select id="getTestTableById" parameterType="int" resultType="com.neil.common.model.TestTable" flushCache="true">
         select * from test_table where id = #{id}
     </select>
 
@@ -20,9 +39,45 @@
         select * from test_table where name like "%"#{name}"%"
     </select>
 
-    <!-- 即使是List类型，resultType也是直接使用对象 -->
+    <!-- 返回的是集合，那应该设置为集合包含的类型，而不是集合本身的类型 -->
     <select id="getTestTable" resultType="com.neil.common.model.TestTable">
         select * from test_table
+    </select>
+
+    <!-- 动态SQL -->
+    <select id="dynamicSqlQuery" resultType="com.neil.common.model.TestTable">
+        select * from test_table
+        <where>
+            <if test="action != null">
+                action like "%"#{action}"%"
+            </if>
+
+            <if test="name != null">
+                <choose>
+                    <when test="type == 1">
+                        and name like #{name}"%"
+                    </when>
+                    <when test="type == 2">
+                        and name like "%"#{name}
+                    </when>
+                    <otherwise>
+                        and name like "%"#{name}"%"
+                    </otherwise>
+                </choose>
+            </if>
+
+            /*
+            collection：
+              单参且是一个List，collection属性值为list
+              单参且是一个array数组候，collection的属性值为array
+              多参封装成Map，取对应值的key
+            index：每次迭代到的位置
+            item:每次迭代到时的别名
+            */
+            <foreach item="item" index="index" collection="list" open="id in (" separator="," close=")" nullable="true">
+                #{item}
+            </foreach>
+        </where>
     </select>
 
 </mapper>

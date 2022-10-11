@@ -48,4 +48,9 @@ public class TestController {
     public List<TestTable> getAllInfos() {
         return service.getTestTable();
     }
+
+    @RequestMapping(value = "/get")
+    public List<TestTable> get() {
+        return service.get();
+    }
 }
