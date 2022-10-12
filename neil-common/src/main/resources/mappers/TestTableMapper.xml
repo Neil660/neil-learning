@@ -48,7 +48,7 @@
     <select id="dynamicSqlQuery" resultType="com.neil.common.model.TestTable">
         select * from test_table
         <where>
-            <if test="action != null">
+            <if test="action != null and action != ''">
                 action like "%"#{action}"%"
             </if>
 

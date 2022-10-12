@@ -66,7 +66,7 @@ public class TestServiceImpl implements TestService {
         for (int i = 0; i < 7000; i++) {
             item.add(i);
         }
-        map.put("list", item);
+        //map.put("list", item);
         return testTableMapper.dynamicSqlQuery(map);
     }
 }
