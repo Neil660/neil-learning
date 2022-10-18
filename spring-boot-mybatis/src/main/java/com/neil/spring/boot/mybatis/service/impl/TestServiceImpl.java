@@ -1,18 +1,16 @@
-package com.neil.common.service.impl;
+package com.neil.spring.boot.mybatis.service.impl;
 
-import com.neil.common.model.TestTable;
-import com.neil.common.dao.TestTableMapper;
-import com.neil.common.service.TestService;
+import com.neil.spring.boot.mybatis.dao.TestTableMapper;
+import com.neil.spring.boot.mybatis.model.TestTable;
+import com.neil.spring.boot.mybatis.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * @Decription 业务层逻辑
@@ -53,6 +51,11 @@ public class TestServiceImpl implements TestService {
     @Override
     public List<TestTable> getTestTable() {
         return testTableMapper.getTestTable();
+    }
+
+    @Override
+    public List<TestTable> getTestTableByOracle() {
+        return testTableMapper.getTestTableByOracle();
     }
 
     @Override

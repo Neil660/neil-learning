@@ -1,6 +1,6 @@
-package com.neil.common.dao;
+package com.neil.spring.boot.mybatis.dao;
 
-import com.neil.common.model.TestTable;
+import com.neil.spring.boot.mybatis.model.TestTable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -23,6 +23,8 @@ public interface TestTableMapper {
     List<TestTable> getTestTableByName(String name);
 
     List<TestTable> getTestTable();
+
+    List<TestTable> getTestTableByOracle();
 
     List<TestTable> dynamicSqlQuery(Map<String, Object> map);
 }

@@ -36,7 +36,7 @@ public class DefaultAspect {
     @Before("controllerPointcut()")
     public void processControllerBefore(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
-        log.info("process Controller Before===================");
+        log.info("执行方法前的入参是：" + args.toString());
     }
 
     /**
@@ -49,7 +49,7 @@ public class DefaultAspect {
     @AfterReturning(returning = "obj", pointcut = "controllerPointcut()")
     public void processControllerAfter(JoinPoint joinPoint, Object obj) {
         Object[] args = joinPoint.getArgs();
-        log.info("process Controller After===================");
+        log.info("执行结果是：" + obj.toString());
     }
 
 }

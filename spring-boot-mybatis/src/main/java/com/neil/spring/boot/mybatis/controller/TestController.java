@@ -1,8 +1,7 @@
-package com.neil.common.controller;
+package com.neil.spring.boot.mybatis.controller;
 
-import com.neil.common.model.TestTable;
-import com.neil.common.service.TestService;
-import org.apache.ibatis.io.ResolverUtil.Test;
+import com.neil.spring.boot.mybatis.model.TestTable;
+import com.neil.spring.boot.mybatis.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,6 +46,11 @@ public class TestController {
     @RequestMapping(value = "/getAllInfos")
     public List<TestTable> getAllInfos() {
         return service.getTestTable();
+    }
+
+    @RequestMapping(value = "/getAllInfosByOracle")
+    public List<TestTable> getAllInfosByOracle() {
+        return service.getTestTableByOracle();
     }
 
     @RequestMapping(value = "/get")

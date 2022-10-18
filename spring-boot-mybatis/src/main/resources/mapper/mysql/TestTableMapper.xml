@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.neil.common.dao.TestTableMapper">
+<mapper namespace="com.neil.spring.boot.mybatis.dao.TestTableMapper">
+    <!-- 1、缓存 -->
     <!--开启全局的二级缓存：基于命名空间，会话关闭也会存储-->
     <!--
         LRU – 最近最少使用：移除最长时间不被使用的对象。
@@ -9,17 +10,20 @@
         SOFT – 软引用：基于垃圾回收器状态和软引用规则移除对象。
         WEAK – 弱引用：更积极地基于垃圾收集器状态和弱引用规则移除对象。
     -->
-    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="false"/>
+    <!--<cache eviction="FIFO" flushInterval="60000" size="512" readOnly="false"/>-->
 
-    <insert id="addTestTable" parameterType="TestTable">
+    <!-- 2、普通语法 -->
+    <insert id="addTestTable" parameterType="com.neil.spring.boot.mybatis.model.TestTable">
         insert into test_table(id, action, name) values (#{id}, #{action}, #{name})
     </insert>
 
+    <!-- 3、使用MAP传参 -->
     <!-- 使用MAP时，tableId是key -->
     <insert id="addTestTable2">
         insert into test_table(id, action, name) values (#{tableId}, #{tableAction}, #{tableName})
     </insert>
 
+    <!-- 4、其他参数含义 -->
     <!--
         flushCache=true:本地缓存和二级缓存被清空
         useCache=true:致本条语句的结果被二级缓存缓存起来
@@ -30,22 +34,22 @@
         resultOrdered=true:假设结果集以正确顺序（排序后）执行映射，当返回新的主结果行时，将不再发生对以前结果行的引用
         resultSets:将列出语句执行后返回的结果集并赋予每个结果集一个名称，多个名称之间以逗号分隔
     -->
-    <select id="getTestTableById" parameterType="int" resultType="com.neil.common.model.TestTable" flushCache="true">
+    <select id="getTestTableById" parameterType="int" resultType="com.neil.spring.boot.mybatis.model.TestTable" flushCache="true">
         select * from test_table where id = #{id}
     </select>
 
-    <!-- 基本类型的parameterType可以省略 -->
-    <select id="getTestTableByName" resultType="com.neil.common.model.TestTable">
+    <!-- 5、基本类型的parameterType可以省略 -->
+    <select id="getTestTableByName" resultType="com.neil.spring.boot.mybatis.model.TestTable">
         select * from test_table where name like "%"#{name}"%"
     </select>
 
-    <!-- 返回的是集合，那应该设置为集合包含的类型，而不是集合本身的类型 -->
-    <select id="getTestTable" resultType="com.neil.common.model.TestTable">
+    <!-- 6、返回的是集合，那应该设置为集合包含的类型，而不是集合本身的类型 -->
+    <select id="getTestTable" resultType="com.neil.spring.boot.mybatis.model.TestTable">
         select * from test_table
     </select>
 
-    <!-- 动态SQL -->
-    <select id="dynamicSqlQuery" resultType="com.neil.common.model.TestTable">
+    <!-- 7、动态SQL -->
+    <select id="dynamicSqlQuery" resultType="com.neil.spring.boot.mybatis.model.TestTable">
         select * from test_table
         <where>
             <if test="action != null and action != ''">

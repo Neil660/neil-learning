@@ -15,6 +15,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
+        <oracle-jdbc.version>12.1.0.2</oracle-jdbc.version>
         <redis.version>2.9.3</redis.version>
         <druid.version>1.1.10</druid.version>
         <netty.version>4.1.65.Final</netty.version>
@@ -49,11 +50,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
@@ -77,6 +73,7 @@
         <module>design-pattern</module>
         <module>neil-consumer</module>
         <module>eureka-server</module>
+        <module>spring-boot-mybatis</module>
     </modules>
 
     <repositories>

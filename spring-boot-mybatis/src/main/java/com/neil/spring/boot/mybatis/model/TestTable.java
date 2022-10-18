@@ -1,4 +1,4 @@
-package com.neil.common.model;
+package com.neil.spring.boot.mybatis.model;
 
 import java.io.Serializable;
 

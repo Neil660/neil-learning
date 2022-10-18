@@ -1,10 +1,8 @@
-package com.neil.common.service;
+package com.neil.spring.boot.mybatis.service;
 
-import com.neil.common.model.TestTable;
-import org.apache.ibatis.io.ResolverUtil.Test;
+import com.neil.spring.boot.mybatis.model.TestTable;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Decription
@@ -22,6 +20,8 @@ public interface TestService {
     List<TestTable> getTestTableByName(String name);
 
     List<TestTable> getTestTable();
+
+    List<TestTable> getTestTableByOracle();
 
     List<TestTable> get();
 }
