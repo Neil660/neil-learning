@@ -22,7 +22,6 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScan(basePackages = "com.neil.spring.boot.mybatis.dao", sqlSessionFactoryRef = "oracleSqlSessionFactory")
-@ConditionalOnProperty(prefix = "neil.database", value = {"name"}, havingValue = "oracle", matchIfMissing = false)
 public class OracleDatasourceConfig {
 
     // mybatis mapper扫描路径

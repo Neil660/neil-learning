@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.12.RELEASE</version>
+        <version>2.2.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -13,22 +13,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
-        <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
-        <oracle-jdbc.version>12.1.0.2</oracle-jdbc.version>
-        <redis.version>2.9.3</redis.version>
-        <druid.version>1.1.10</druid.version>
-        <netty.version>4.1.65.Final</netty.version>
-        <rocketmq.client.version>3.5.8</rocketmq.client.version>
-        <rocketmq.version>3.5.8</rocketmq.version>
-        <tomcat.version>9.0.55</tomcat.version>
         <springboot.version>2.2.9.RELEASE</springboot.version>
+        <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
     </properties>
 
-    <groupId>com.neil.common</groupId>
-    <artifactId>neil-common</artifactId>
+    <groupId>com.neil.springboot.aop</groupId>
+    <artifactId>spring-boot-aop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>neil-common</name>
+    <name>spring-boot-aop</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
@@ -36,12 +28,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
-        <!-- mybatis -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.2</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <!--AOP切面-->
@@ -63,26 +57,21 @@
             <scope>compile</scope>
         </dependency>
 
-        <!--<dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-redis</artifactId>
-            <version>2.2.3.RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <scope>compile</scope>
-        </dependency>-->
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.83</version>
         </dependency>
     </dependencies>
 

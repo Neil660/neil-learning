@@ -68,14 +68,6 @@
         </plugins>
     </build>
 
-    <modules>
-        <module>neil-common</module>
-        <module>design-pattern</module>
-        <module>neil-consumer</module>
-        <module>eureka-server</module>
-        <module>spring-boot-mybatis</module>
-    </modules>
-
     <repositories>
         <repository>
             <id>spring-milestones</id>

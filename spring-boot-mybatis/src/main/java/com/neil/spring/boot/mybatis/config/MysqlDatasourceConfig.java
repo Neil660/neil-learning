@@ -23,7 +23,6 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScan(basePackages = "com.neil.spring.boot.mybatis.dao", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
-@ConditionalOnProperty(prefix = "neil.database", value = {"name"}, havingValue = "mysql", matchIfMissing = false)
 public class MysqlDatasourceConfig {
 
     // mybatis mapper扫描路径

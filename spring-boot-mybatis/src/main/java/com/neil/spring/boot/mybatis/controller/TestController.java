@@ -48,6 +48,7 @@ public class TestController {
         return service.getTestTable();
     }
 
+    // TODO Oracle配置没加载进去
     @RequestMapping(value = "/getAllInfosByOracle")
     public List<TestTable> getAllInfosByOracle() {
         return service.getTestTableByOracle();
