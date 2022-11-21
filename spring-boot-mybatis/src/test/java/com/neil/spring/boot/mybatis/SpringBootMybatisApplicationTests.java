@@ -1,4 +1,4 @@
-package com.neil.spring.boot.mybatis;
+package com.spring.boot.mybatis;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

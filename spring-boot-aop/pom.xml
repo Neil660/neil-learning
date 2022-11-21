@@ -17,7 +17,7 @@
         <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
     </properties>
 
-    <groupId>com.neil.springboot.aop</groupId>
+    <groupId>com.springboot.aop</groupId>
     <artifactId>spring-boot-aop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-aop</name>
