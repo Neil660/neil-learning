@@ -48,6 +48,7 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- Kafka依赖 -->
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>

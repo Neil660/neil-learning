@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.9.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.spring.boot.kafka.producers</groupId>
-    <artifactId>kafka-producers</artifactId>
+    <groupId>com.spring.boot.rocketmq.producers</groupId>
+    <artifactId>rocketmq-producers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kafka-producers</name>
+    <name>rocketmq-producers</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
-        <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -48,10 +41,11 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Kafka依赖 -->
+        <!-- rocketMQ依赖 -->
         <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
         </dependency>
     </dependencies>
 
@@ -84,7 +78,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.spring.boot.kafka.producers.KafkaProducersApplication</mainClass>
+                    <mainClass>com.spring.boot.rocketmq.producers.RocketmqProducersApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
