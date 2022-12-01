@@ -20,9 +20,11 @@ springboot 2.x整合redis，配合缓存注解实现缓存功能
 ## spring-boot-kafka
 前置条件：本地安装kafka并启动
 
+官网：https://kafka.apache.org/documentation/#quickstart
+
 window安装使用kafka 3.x版本:https://www.cnblogs.com/Neil-learning/p/16915441.html
 
-Kafka将消息以topic为单位进行归纳，topic可以有多个分区partition有序接收消息，发布消息的程序成为producers，消费消息的程序成为consumer。Kafka以集群的方式运行，可以由一个或多个服务组成，每个服务叫做一个broker。
+Kafka将消息以topic为单位进行归纳，topic可以有多个分区partition有序接收消息，发布消息的程序成为producers，消费消息的程序成为consumer。Kafka以集群的方式运行，可以由一个或多个服务组成，每个服务叫做一个broker。注册中心为zookeeper
 
 kafka-consumer:消费者
 kafka-producers:生产者

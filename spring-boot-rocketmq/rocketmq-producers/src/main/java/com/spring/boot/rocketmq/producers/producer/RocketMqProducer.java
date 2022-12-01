@@ -33,6 +33,7 @@ import static com.spring.boot.rocketmq.producers.producer.SendMsgType.SYNC;
  */
 @Slf4j
 public class RocketMqProducer {
+    // 核心producer，真正发消息的对象
     private DefaultMQProducer producer;
     private String namesrvAddr;
     private String producerGroup;

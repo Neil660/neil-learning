@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 public class TransactionProducer {
+    // 事务生产者的发送对象不同，使用的是TransactionMQProducer
     private TransactionMQProducer producer;
     private String namesrvAddr;
     private String producerGroup;

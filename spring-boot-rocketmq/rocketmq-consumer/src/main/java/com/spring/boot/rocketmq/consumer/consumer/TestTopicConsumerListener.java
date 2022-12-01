@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @Decription
+ * @Decription 消费监听器
  * @Author NEIL
  * @Date 2022/11/29 15:28
  * @Version 1.0

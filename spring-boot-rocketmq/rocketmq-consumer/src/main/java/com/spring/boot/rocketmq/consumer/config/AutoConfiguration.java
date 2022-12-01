@@ -39,7 +39,7 @@ public class AutoConfiguration {
     }
 
     /**
-     * test_topic主题的消费者
+     * test_topic主题的消费者，通过start启动
      * @param rocketMqProperties
      * @param testTopicListener
      * @return
