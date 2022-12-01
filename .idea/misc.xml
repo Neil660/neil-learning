@@ -9,9 +9,16 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-aop/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-kafka/producers/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-kafka/kafka-producers/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/pom.xml" />
       </list>
     </option>
   </component>
