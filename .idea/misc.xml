@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/spring-boot-kafka/kafka-producers/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-quartz/pom.xml" />
       </list>
     </option>
   </component>

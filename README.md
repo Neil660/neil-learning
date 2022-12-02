@@ -12,6 +12,10 @@ springboot整合AOP切面实现，配合自定义注解
 
 springboot整合Mybatis、Druid多数据源、eureka客户端、swagger2
 
+## spring-boot-quartz
+Quart任务进度管理器（定时任务）
+官网：http://quartz-scheduler.org/
+
 ## spring-boot-redis
 前置条件：本地安装redis并启动
 
