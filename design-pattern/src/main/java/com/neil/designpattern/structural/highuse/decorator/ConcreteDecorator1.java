@@ -15,6 +15,6 @@ public class ConcreteDecorator1 extends Decorator {
     @Override
     public void oper() {
         component.oper();
-        System.out.println("添加美一个草莓，变成草莓蛋糕");
+        System.out.println("添加一个草莓，变成草莓蛋糕");
     }
 }

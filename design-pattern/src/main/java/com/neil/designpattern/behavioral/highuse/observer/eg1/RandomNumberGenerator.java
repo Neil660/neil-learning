@@ -1,4 +1,4 @@
-package com.neil.designpattern.behavioral.highuse.observer;
+package com.neil.designpattern.behavioral.highuse.observer.eg1;
 
 import java.util.Random;
 
