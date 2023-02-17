@@ -40,6 +40,7 @@
         <option value="$PROJECT_DIR$/spring-boot-quartz/pom.xml" />
         <option value="$PROJECT_DIR$/multi-threaded-technology/pom.xml" />
         <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-aop/pom.xml" />
       </list>
     </option>
   </component>
