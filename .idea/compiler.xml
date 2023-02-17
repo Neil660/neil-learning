@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="design-pattern" />
         <module name="eureka-server" />
         <module name="kafka-consumer" />
         <module name="kafka-producers" />
+        <module name="multi-threaded-technology" />
         <module name="rocketmq-consumer" />
         <module name="rocketmq-producers" />
-        <module name="spring-boot-aop" />
         <module name="spring-boot-mybatis" />
         <module name="spring-boot-quartz" />
         <module name="spring-boot-redis" />
@@ -24,12 +25,15 @@
       <module name="hystrix-server" target="1.8" />
       <module name="kafka-consumer" target="1.8" />
       <module name="kafka-producers" target="1.8" />
+      <module name="multi-threaded-technology" target="1.8" />
       <module name="neil" target="1.8" />
       <module name="neil-common" target="1.8" />
       <module name="neil-consumer" target="1.8" />
       <module name="rocketmq-consumer" target="1.8" />
       <module name="rocketmq-producers" target="1.8" />
       <module name="spring-boot-aop" target="1.8" />
+      <module name="spring-boot-aop (1) (com.springboot.aop)" target="1.8" />
+      <module name="spring-boot-aop3" target="17" />
       <module name="spring-boot-mybatis" target="1.8" />
       <module name="spring-boot-quartz" target="1.8" />
       <module name="spring-boot-redis" target="1.8" />
@@ -41,9 +45,12 @@
       <module name="eureka-server" options="-parameters" />
       <module name="kafka-consumer" options="-parameters" />
       <module name="kafka-producers" options="-parameters" />
+      <module name="multi-threaded-technology" options="-parameters" />
       <module name="neil-common" options="-parameters" />
       <module name="neil-consumer" options="-parameters" />
       <module name="spring-boot-aop" options="-parameters" />
+      <module name="spring-boot-aop (1) (com.springboot.aop)" options="-parameters" />
+      <module name="spring-boot-aop3" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
     </option>

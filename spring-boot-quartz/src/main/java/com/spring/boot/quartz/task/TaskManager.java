@@ -35,7 +35,7 @@ import static org.quartz.TriggerBuilder.newTrigger;
 public final class TaskManager {
     private Scheduler scheduler = (Scheduler) ServiceLocator.lookup("schedulerManager");
 
-    private volatile static TaskManager taskManager;
+    private static TaskManager taskManager;
 
     private TaskManager() {
         if (taskManager != null) {
@@ -45,11 +45,7 @@ public final class TaskManager {
 
     public static TaskManager getInstance() {
         if (taskManager == null) {
-            synchronized (TaskManager.class) {
-                if (taskManager == null) {
-                    taskManager = new TaskManager();
-                }
-            }
+            taskManager = new TaskManager();
         }
         return taskManager;
     }
@@ -124,11 +120,12 @@ public final class TaskManager {
      * @throws Exception
      */
     public void priorityTrigger() throws Exception {
-        JobDetail job = new JobDetailImpl("Print2Task", Print2Task.class);
+        JobDetail job = newJob(Print2Task.class).withIdentity("job1", "group1").build();
 
         SchedulerFactory sf = new StdSchedulerFactory(
                 "C:\\Tools\\IJetBrains\\IntelliJ IDEA 2018.3.5\\Projects\\neil-learning\\spring-boot-quartz\\src\\main\\resources\\quartz_priority.properties");
         Scheduler sched = sf.getScheduler();
+
 
         // Calculate the start time of all triggers as 5 seconds from now
         Date startTime = futureDate(5, IntervalUnit.SECOND);
