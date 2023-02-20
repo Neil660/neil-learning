@@ -17,10 +17,10 @@
         <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
     </properties>
 
-    <groupId>com.springboot.aop</groupId>
-    <artifactId>spring-boot-aop</artifactId>
+    <groupId>com.spring.boot.aop</groupId>
+    <artifactId>spring-aop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-aop</name>
+    <name>spring-aop</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>

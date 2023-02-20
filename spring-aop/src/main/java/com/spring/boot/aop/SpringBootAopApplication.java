@@ -17,7 +17,7 @@ public class SpringBootAopApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringBootAopApplication.class, args);
         // 查看使用的代理模式
-        UserService userService = context.getBean(UserService.class);
-        userService.work();
+        /*UserService userService = context.getBean(UserService.class);
+        userService.work();*/
     }
 }
