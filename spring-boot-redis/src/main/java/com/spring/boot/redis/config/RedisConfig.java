@@ -49,28 +49,6 @@ public class RedisConfig extends CachingConfigurerSupport {
         };
     }
 
-/*    *//**
-     * 缓存配置管理器
-     *//*
-    @Bean
-    public CacheManager cacheManager(LettuceConnectionFactory factory) {
-        //以锁写入的方式创建RedisCacheWriter对象
-        RedisCacheWriter writer = RedisCacheWriter.lockingRedisCacheWriter(factory);
-        *//*
-        设置CacheManager的Value序列化方式为JdkSerializationRedisSerializer,
-        但其实RedisCacheConfiguration默认就是使用
-        StringRedisSerializer序列化key，
-        JdkSerializationRedisSerializer序列化value,
-        所以以下注释代码就是默认实现，没必要写，直接注释掉
-         *//*
-        // RedisSerializationContext.SerializationPair pair = RedisSerializationContext.SerializationPair.fromSerializer(new JdkSerializationRedisSerializer(this.getClass().getClassLoader()));
-        // RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(pair);
-        //创建默认缓存配置对象
-        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
-        RedisCacheManager cacheManager = new RedisCacheManager(writer, config);
-        return cacheManager;
-    }*/
-
     @Bean
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory factory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();

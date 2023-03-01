@@ -41,6 +41,7 @@
         <option value="$PROJECT_DIR$/multi-threaded-technology/pom.xml" />
         <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
         <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security/pom.xml" />
       </list>
     </option>
   </component>

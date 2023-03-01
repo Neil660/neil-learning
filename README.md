@@ -7,7 +7,7 @@
 # multi-threaded-technology
 多线程工具类使用示例
 
-## spring-boot-aop
+## spring-aop
 springboot整合AOP切面实现，配合自定义注解
 
 ## spring-boot-mybatis
@@ -20,9 +20,9 @@ Quart任务进度管理器（定时任务）
 官网：http://quartz-scheduler.org/
 
 ## spring-boot-redis
-前置条件：本地安装redis并启动
+前置条件：存在redis单机或集群服务器
 
-springboot 2.x整合redis，配合缓存注解实现缓存功能
+springboot 2.x整合redis（letture），配合缓存注解实现缓存功能
 
 ## spring-boot-kafka
 前置条件：本地安装kafka并启动

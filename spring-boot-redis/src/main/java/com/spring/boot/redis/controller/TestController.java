@@ -1,6 +1,7 @@
 package com.spring.boot.redis.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.spring.boot.redis.dao.RedisDefaultIDao;
 import com.spring.boot.redis.model.SysLog;
 import com.spring.boot.redis.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 /**
@@ -23,6 +25,25 @@ import java.util.List;
 public class TestController {
     @Autowired
     SysLogService sysLogService;
+    @Autowired
+    RedisDefaultIDao redisDefaultIDao;
+
+    @RequestMapping("/addToRedis/{k}")
+    public void addToRedis(@PathVariable String k) {
+        try {
+            redisDefaultIDao.setObj(k, "value-" + k);
+        }
+        catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping("/getFromRedis/{k}")
+    public String getFromRedis(@PathVariable String k) {
+        String result = "";
+        result = (String) redisDefaultIDao.getObj(k);
+        return result;
+    }
 
     @RequestMapping("/add")
     public int addSysLog(@RequestBody JSONObject query) {
