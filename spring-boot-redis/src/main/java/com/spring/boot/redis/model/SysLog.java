@@ -20,6 +20,19 @@ public class SysLog implements Serializable {
     private String ip;
     private Date createTime;
 
+    public SysLog() {};
+
+    public SysLog(Integer id, String username, String operation, Integer time, String method, String params, String ip, Date createTime) {
+        this.id = id;
+        this.username = username;
+        this.operation = operation;
+        this.time = time;
+        this.method = method;
+        this.params = params;
+        this.ip = ip;
+        this.createTime = createTime;
+    }
+
     public Integer getId() {
         return id;
     }

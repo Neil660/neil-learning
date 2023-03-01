@@ -9,7 +9,9 @@ import java.io.UnsupportedEncodingException;
  * @Version 1.0
  */
 public interface RedisDefaultIDao {
-    public void setObj(final String key, final Object value) throws UnsupportedEncodingException;
-    public Object getObj(final String key);
+    void setObj(final String key, final Object value) throws UnsupportedEncodingException;
+    Object getObj(final String key);
 
+    int setEx(final String key, final Object value, long time);
+    <T> T readObject(final String key, Class<T> clz);
 }

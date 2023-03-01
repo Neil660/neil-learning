@@ -18,6 +18,7 @@
         <module name="spring-boot-mybatis" />
         <module name="spring-boot-quartz" />
         <module name="spring-boot-redis" />
+        <module name="spring-boot-redis-redission" />
         <module name="spring-security" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
       <module name="spring-boot-mybatis" target="1.8" />
       <module name="spring-boot-quartz" target="1.8" />
       <module name="spring-boot-redis" target="1.8" />
+      <module name="spring-boot-redis-redission" target="1.8" />
       <module name="spring-security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -47,6 +49,7 @@
       <module name="spring-aop" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
+      <module name="spring-boot-redis-redission" options="-parameters" />
       <module name="spring-security" options="-parameters" />
     </option>
   </component>

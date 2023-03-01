@@ -21,6 +21,7 @@ Quart任务进度管理器（定时任务）
 
 ## spring-boot-redis
 前置条件：存在redis单机或集群服务器
+整合protostuff来进行数据压缩
 
 springboot 2.x整合redis（letture），配合缓存注解实现缓存功能
 
