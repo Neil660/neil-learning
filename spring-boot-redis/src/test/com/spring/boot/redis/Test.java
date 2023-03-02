@@ -3,7 +3,16 @@ package com.spring.boot.redis;
 import com.spring.boot.redis.model.SysLog;
 import com.spring.boot.redis.utils.ByteStreamSerializeUtil;
 import com.spring.boot.redis.utils.ProtoStuffSerializeUtil;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.connection.RedisClusterConnection;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -15,7 +24,20 @@ import java.util.List;
  * @Date 2023/3/1 14:19
  * @Version 1.0
  */
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class Test {
+    @Autowired
+    private RedisTemplate redisTemplate;
+    @Autowired
+    private RedisConnectionFactory connectionFactory;
+
+    @org.junit.Test
+    public void test1() {
+
+        System.out.println();
+    }
+
     @org.junit.jupiter.api.Test
     public void test() {
         ProtoStuffSerializeUtil util = new ProtoStuffSerializeUtil();

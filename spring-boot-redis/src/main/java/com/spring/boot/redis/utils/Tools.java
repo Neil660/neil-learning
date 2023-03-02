@@ -32,4 +32,13 @@ public class Tools {
             }
         }
     }
+
+    public static void sleep(long time) {
+        try {
+            Thread.sleep(time);
+        }
+        catch (InterruptedException e) {
+            log.error(e.getMessage(), e);
+        }
+    }
 }

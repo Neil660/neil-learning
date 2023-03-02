@@ -1,5 +1,6 @@
 package com.spring.boot.quartz.entity;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,15 +10,32 @@ import java.util.Map;
  * @Date 2022/12/1 20:49
  * @Version 1.0
  */
-public class TaskEntity {
-    private int jobId;
-    private int jobGroupId;
+public class TaskEntity implements Serializable {
+    private static final long serialVersionUID = -2389020702315876172L;
+
+    private long jobId;
+    /**
+     * 分组概念，每次启动若干组
+     */
+    private Integer jobGroupId;
     private String jobName;
+    /**
+     * 对应的Bean的类名
+     */
     private String beanName;
+    /**
+     * 入参
+     */
     private String params;
+    /**
+     * 时间表达式
+     */
     private String cronExpr;
-    private int beforeJobId;
-    private int status;
+    private Integer beforeJobId;
+    /**
+     * 任务状态，0代表活跃，1代表死亡
+     */
+    private Integer status;
 
     private Map<String, Object> content;
 
@@ -61,15 +79,15 @@ public class TaskEntity {
         return content.get(key);
     }
 
-    public int getJobId() {
+    public long getJobId() {
         return jobId;
     }
 
-    public void setJobId(int jobId) {
+    public void setJobId(Integer jobId) {
         this.jobId = jobId;
     }
 
-    public int getJobGroupId() {
+    public Integer getJobGroupId() {
         return jobGroupId;
     }
 
@@ -109,11 +127,11 @@ public class TaskEntity {
         this.cronExpr = cronExpr;
     }
 
-    public int getBeforeJobId() {
+    public Integer getBeforeJobId() {
         return beforeJobId;
     }
 
-    public void setBeforeJobId(int beforeJobId) {
+    public void setBeforeJobId(Integer beforeJobId) {
         this.beforeJobId = beforeJobId;
     }
 

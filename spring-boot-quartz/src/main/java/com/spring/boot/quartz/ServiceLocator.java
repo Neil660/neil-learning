@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * @Decription
+ * @Decription 获取容器内的bean
  * @Author NEIL
  * @Date 2022/12/1 21:59
  * @Version 1.0
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class ServiceLocator implements ApplicationContextAware {
-    private static ApplicationContext ctx = null;//new ClassPathXmlApplicationContext("classpath:/config/spring/spring.xml");;
+    private static ApplicationContext ctx = null;
 
     private ServiceLocator() {
     }
@@ -36,6 +36,11 @@ public class ServiceLocator implements ApplicationContextAware {
         return obj;
     }
 
+    /**
+     * 在postProcessBeforeInitialization方法中会被调用，设置容器
+     * @param arg0
+     * @throws BeansException
+     */
     @Override
     public void setApplicationContext(ApplicationContext arg0) throws BeansException {
         ctx = arg0;
