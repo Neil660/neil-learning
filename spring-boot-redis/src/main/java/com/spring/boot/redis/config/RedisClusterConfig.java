@@ -19,6 +19,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @Version 1.0
  */
 @Configuration
+@ConditionalOnProperty(name = "spring.redis.type", havingValue = "cluster")
 public class RedisClusterConfig {
 
     @Autowired

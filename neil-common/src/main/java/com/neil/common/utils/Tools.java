@@ -1,17 +1,20 @@
-package com.spring.boot.redis.utils;
+package com.neil.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.Closeable;
+import java.util.Random;
 
 /**
  * @Decription
  * @Author NEIL
- * @Date 2023/3/1 14:34
+ * @Date 2023/3/2 16:17
  * @Version 1.0
  */
 @Slf4j
 public class Tools {
+    private static final Random rnd = new Random();
+
     /**
      * 关闭流不报异常
      * @param closeable

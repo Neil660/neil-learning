@@ -1,3 +1,6 @@
+## neil-common
+公共模块，一些工具类加在这里
+
 ## design-pattern
 常见设计模式
 
@@ -10,20 +13,26 @@
 ## spring-aop
 springboot整合AOP切面实现，配合自定义注解
 
+## spring-sucurity
+添加中。。。
+
 ## spring-boot-mybatis
 前置条件：启动eureka-server模块
 
 springboot整合Mybatis、Druid多数据源、eureka客户端、swagger2
 
 ## spring-boot-quartz
-Quart任务进度管理器（定时任务）
+Quart任务进度管理器（定时任务），框架化
+
 官网：http://quartz-scheduler.org/
 
 ## spring-boot-redis
 前置条件：存在redis单机或集群服务器
-整合protostuff来进行数据压缩
 
-springboot 2.x整合redis（letture），配合缓存注解实现缓存功能
+springboot 2.x整合redis（letture），配合缓存注解实现缓存功能。整合protostuff来进行数据压缩
+
+## spring-boot-redis-redission
+springboot整合redission
 
 ## spring-boot-kafka
 前置条件：本地安装kafka并启动

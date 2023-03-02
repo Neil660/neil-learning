@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-boot-kafka/kafka-producers/kafka-producers.iml" filepath="$PROJECT_DIR$/spring-boot-kafka/kafka-producers/kafka-producers.iml" />
       <module fileurl="file://$PROJECT_DIR$/multi-threaded-technology/multi-threaded-technology.iml" filepath="$PROJECT_DIR$/multi-threaded-technology/multi-threaded-technology.iml" />
       <module fileurl="file://$PROJECT_DIR$/neil.iml" filepath="$PROJECT_DIR$/neil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neil-common/neil-common.iml" filepath="$PROJECT_DIR$/neil-common/neil-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/rocketmq-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/rocketmq-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/rocketmq-producers.iml" filepath="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/rocketmq-producers.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring-aop.iml" />
