@@ -1,5 +1,7 @@
 ## neil-common
-公共模块，一些工具类加在这里
+公共模块，一些工具类加在这里；配置全局缓存
+
+在编译的时候，需要compile->package->install添加到库中，这样依赖到这个模块的其他模块才能编译成功。注意本地仓库中可能会存在无法替换jar的文件，需要手动删除
 
 ## design-pattern
 常见设计模式
@@ -29,7 +31,7 @@ Quart任务进度管理器（定时任务），框架化
 ## spring-boot-redis
 前置条件：存在redis单机或集群服务器
 
-springboot 2.x整合redis（letture），配合缓存注解实现缓存功能。整合protostuff来进行数据压缩
+springboot 2.x整合redis（letture），配合缓存注解实现缓存功能。整合protostuff来进行数据压缩；
 
 ## spring-boot-redis-redission
 springboot整合redission

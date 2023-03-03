@@ -23,6 +23,7 @@
         <rocketmq.version>3.5.8</rocketmq.version>
         <tomcat.version>9.0.55</tomcat.version>
         <springboot.version>2.2.9.RELEASE</springboot.version>
+        <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
     </properties>
 
     <groupId>com.parent</groupId>
@@ -41,10 +42,11 @@
         </dependency>-->
     </dependencies>
 
-<!--    <modules>
+    <modules>
         <module>neil-common</module>
         <module>spring-boot-redis</module>
-    </modules>-->
+        <module>spring-boot-quartz</module>
+    </modules>
 
     <build>
         <plugins>

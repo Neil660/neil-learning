@@ -51,6 +51,7 @@
       <module name="neil-common" options="-parameters" />
       <module name="spring-aop" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
+      <module name="spring-boot-quartz" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
       <module name="spring-boot-redis-redission" options="-parameters" />
       <module name="spring-security" options="-parameters" />

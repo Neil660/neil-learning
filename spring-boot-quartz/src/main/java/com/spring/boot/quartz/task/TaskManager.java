@@ -1,33 +1,21 @@
 package com.spring.boot.quartz.task;
 
 import com.mysql.jdbc.StringUtils;
-import com.spring.boot.quartz.ServiceLocator;
+import com.neil.common.aware.ServiceLocator;
 import com.spring.boot.quartz.entity.TaskEntity;
-import com.spring.boot.quartz.task.job.PrintTask;
 import com.spring.boot.quartz.util.TaskTrigger;
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.DateBuilder.IntervalUnit;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerFactory;
-import org.quartz.Trigger;
-import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.quartz.CronScheduleBuilder.cronSchedule;
-import static org.quartz.DateBuilder.futureDate;
 import static org.quartz.JobBuilder.newJob;
-import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
-import static org.quartz.TriggerBuilder.newTrigger;
 
 /**
  * @Decription

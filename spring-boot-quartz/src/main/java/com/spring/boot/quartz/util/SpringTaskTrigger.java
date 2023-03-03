@@ -1,6 +1,6 @@
 package com.spring.boot.quartz.util;
 
-import com.spring.boot.quartz.ServiceLocator;
+import com.neil.common.aware.ServiceLocator;
 import com.spring.boot.quartz.entity.TaskEntity;
 import com.spring.boot.quartz.task.Task;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,11 @@
-package com.spring.boot.quartz;
+package com.neil.common.aware;
+
+/**
+ * @Decription
+ * @Author NEIL
+ * @Date 2023/3/2 18:14
+ * @Version 1.0
+ */
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
