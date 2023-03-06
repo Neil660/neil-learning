@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-admin/admin-client/admin-client.iml" filepath="$PROJECT_DIR$/spring-boot-admin/admin-client/admin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-admin/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/spring-boot-admin/admin-server/admin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/kafka-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/kafka-consumer.iml" />
