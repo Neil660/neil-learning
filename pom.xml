@@ -42,12 +42,33 @@
         </dependency>-->
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modules>
         <module>neil-common</module>
-        <module>spring-boot-redis</module>
-        <module>spring-boot-quartz</module>
+        <module>design-pattern</module>
+        <module>eureka-server</module>
+        <module>multi-threaded-technology</module>
+        <module>spring-aop</module>
         <module>spring-boot-admin/admin-client</module>
         <module>spring-boot-admin/admin-server</module>
+        <module>spring-boot-kafka/kafka-consumer</module>
+        <module>spring-boot-kafka/kafka-producers</module>
+        <module>spring-boot-mybatis</module>
+        <module>spring-boot-quartz</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-rocketmq/rocketmq-consumer</module>
+        <module>spring-boot-rocketmq/rocketmq-producers</module>
     </modules>
 
     <build>

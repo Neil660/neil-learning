@@ -40,10 +40,12 @@
         <option value="$PROJECT_DIR$/spring-boot-quartz/pom.xml" />
         <option value="$PROJECT_DIR$/multi-threaded-technology/pom.xml" />
         <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-redis-redission/pom.xml" />
         <option value="$PROJECT_DIR$/neil-common/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/admin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
       </list>
     </option>
   </component>
