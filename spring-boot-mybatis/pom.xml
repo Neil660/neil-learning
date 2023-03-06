@@ -18,7 +18,7 @@
         <oracle-jdbc.version>12.1.0.2</oracle-jdbc.version>
     </properties>
 
-    <groupId>com.spring.boot.mybatis</groupId>
+    <groupId>com.neil.mybatis</groupId>
     <artifactId>spring-boot-mybatis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-mybatis</name>

@@ -8,7 +8,7 @@
         <version>2.2.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.multi.thread</groupId>
+    <groupId>com.neil.multi.thread</groupId>
     <artifactId>multi-threaded-technology</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>multi-threaded-technology</name>

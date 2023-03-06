@@ -8,7 +8,7 @@
         <version>2.2.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.spring.boot.kafka.consumer</groupId>
+    <groupId>com.neil.kafka.consumer</groupId>
     <artifactId>kafka-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>kafka-consumer</name>
@@ -84,7 +84,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.spring.boot.kafka.consumer.KafkaConsumerApplication</mainClass>
+                    <mainClass>com.neil.kafka.consumer.KafkaConsumerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

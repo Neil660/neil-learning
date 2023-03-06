@@ -8,7 +8,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.spring.boot.kafka.producers</groupId>
+    <groupId>com.neil.kafka.producers</groupId>
     <artifactId>kafka-producers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>kafka-producers</name>
@@ -84,7 +84,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.spring.boot.kafka.producers.KafkaProducersApplication</mainClass>
+                    <mainClass>com.neil.kafka.producers.KafkaProducersApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
