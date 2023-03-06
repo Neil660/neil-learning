@@ -46,6 +46,8 @@
         <module>neil-common</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-quartz</module>
+        <module>spring-boot-admin/admin-client</module>
+        <module>spring-boot-admin/admin-server</module>
     </modules>
 
     <build>

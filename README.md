@@ -1,7 +1,10 @@
 ## neil-common
-公共模块，一些工具类加在这里；配置全局缓存
+公共模块，一些工具类加在这里；
 
-在编译的时候，需要compile->package->install添加到库中，这样依赖到这个模块的其他模块才能编译成功。注意本地仓库中可能会存在无法替换jar的文件，需要手动删除
+com.neil.customcomponent.beanfactorypostprocessor：BeanFactoryPostProcessor的使用
+
+
+在编译的时候，需要直接编译父项目
 
 ## design-pattern
 常见设计模式
@@ -14,6 +17,11 @@
 
 ## spring-aop
 springboot整合AOP切面实现，配合自定义注解
+
+## spring-boot-admin
+可以把Actuator数据可视化的组件，需要启动客户端admin-client跟服务端admin-server
+
+后期加入Spring Security进行安全控制，那么访问admin-server的控制台和client都需要进行账号和密码才能进行连接；后期加入客户端挂了后的电子邮件通知
 
 ## spring-sucurity
 添加中。。。
@@ -34,7 +42,7 @@ Quart任务进度管理器（定时任务），框架化
 springboot 2.x整合redis（letture），配合缓存注解实现缓存功能。整合protostuff来进行数据压缩；
 
 ## spring-boot-redis-redission
-springboot整合redission
+springboot整合redission，添加中。。。
 
 ## spring-boot-kafka
 前置条件：本地安装kafka并启动

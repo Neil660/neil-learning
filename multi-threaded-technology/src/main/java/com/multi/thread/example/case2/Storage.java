@@ -18,8 +18,8 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Storage implements Closeable, AutoCloseable {
     // 可自由访问文件任意位置
-    private final RandomAccessFile storeFile;
-    // 文件通道，提供写入数据的通道
+    private final RandomAccessFile randomAccessFile;
+    // 文件通道，提供写入数据的通道 【NIO逐行读取法】
     private final FileChannel fileChannel;
     // 写入数据的总长度
     protected final AtomicLong totalWrites = new AtomicLong(0);
@@ -30,8 +30,8 @@ public class Storage implements Closeable, AutoCloseable {
         String localFileName;
         // 创建用来存储的文件
         localFileName = createStoreFile(fileSize, fullFileName);
-        storeFile = new RandomAccessFile(localFileName, "rw");
-        fileChannel = storeFile.getChannel();
+        randomAccessFile = new RandomAccessFile(localFileName, "rw");
+        fileChannel = randomAccessFile.getChannel();
     }
 
     /**
@@ -83,7 +83,7 @@ public class Storage implements Closeable, AutoCloseable {
     @Override
     public synchronized void close() throws IOException {
         if (fileChannel.isOpen()) {
-            Tools.silentClose(fileChannel, storeFile);
+            Tools.silentClose(fileChannel, randomAccessFile);
         }
     }
 }
