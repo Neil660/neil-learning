@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 // 选择那些路径和api会生成document
                 .select()
                 // 扫描展示api的路径包
-                .apis(RequestHandlerSelectors.basePackage("com.spring.boot.mybatis.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.neil.mybatis.controller"))
                 // 对所有路径进行监控
                 .paths(PathSelectors.any())
                 // 构建
