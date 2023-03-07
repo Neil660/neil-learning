@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 @Configuration
-@MapperScan(basePackages = "com.spring.boot.mybatis.dao", sqlSessionFactoryRef = "oracleSqlSessionFactory")
+@MapperScan(basePackages = "com.neil.mybatis.dao", sqlSessionFactoryRef = "oracleSqlSessionFactory")
 public class OracleDatasourceConfig {
 
     // mybatis mapper扫描路径

@@ -21,7 +21,7 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 @Configuration
-@MapperScan(basePackages = "com.spring.boot.mybatis.dao", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
+@MapperScan(basePackages = "com.neil.mybatis.dao", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
 public class MysqlDatasourceConfig {
 
     // mybatis mapper扫描路径

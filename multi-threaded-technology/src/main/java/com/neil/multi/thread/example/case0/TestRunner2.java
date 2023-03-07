@@ -1,5 +1,8 @@
 package com.neil.multi.thread.example.case0;
 
+import com.neil.utils.Tools;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
@@ -19,6 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Date 2023/1/11 15:01
  * @Version 1.0
  */
+@Slf4j
 public class TestRunner2 {
     private static AtomicInteger sum = new AtomicInteger(0);
     private static volatile Integer sum1 = new Integer(0);
@@ -29,7 +33,13 @@ public class TestRunner2 {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(sum());
+        log.info("===========");
+        Callable c = () -> {
+            Tools.sleep(3000);
+            return 1;
+        };
+        Integer res = (Integer) c.call();
+        log.info(res + "");
     }
 
     private final static ExecutorService EXECUTOR_SERVICE = new ThreadPoolExecutor(5, 10,
