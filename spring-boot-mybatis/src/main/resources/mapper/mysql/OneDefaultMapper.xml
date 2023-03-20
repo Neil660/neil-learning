@@ -49,6 +49,12 @@
     </select>
 
     <!-- 7、动态SQL -->
+    <!--collection：
+        单参且是一个List，collection属性值为list
+        单参且是一个array数组候，collection的属性值为array
+        多参封装成Map，取对应值的key
+        index：每次迭代到的位置
+        item:每次迭代到时的别名-->
     <select id="dynamicSqlQuery" resultType="com.neil.mybatis.model.TestTable">
         select * from test_table
         <where>
@@ -70,14 +76,6 @@
                 </choose>
             </if>
 
-            /*
-            collection：
-              单参且是一个List，collection属性值为list
-              单参且是一个array数组候，collection的属性值为array
-              多参封装成Map，取对应值的key
-            index：每次迭代到的位置
-            item:每次迭代到时的别名
-            */
             <foreach item="item" index="index" collection="list" open="id in (" separator="," close=")" nullable="true">
                 #{item}
             </foreach>
