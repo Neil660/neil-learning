@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.neil.mybatis.dao.TestTableMapper">
+<mapper namespace="com.neil.mybatis.dao.datasourcestwo.TwoDefaultMapper">
 
     <select id="getTestTableByOracle" resultType="com.neil.mybatis.model.TestTable">
-        select * from test_table
+        SELECT * FROM TEST_TABLE
+    </select>
+
+    <select id="getWoOrderStateByOracle" resultType="com.neil.mybatis.model.WoOrderState">
+        SELECT * FROM WO_ORDER_STATE
     </select>
 
 </mapper>

@@ -1,7 +1,9 @@
 package com.neil.mybatis.service.impl;
 
-import com.neil.mybatis.dao.TestTableMapper;
+import com.neil.mybatis.dao.datasourcesone.OneDefaultMapper;
+import com.neil.mybatis.dao.datasourcestwo.TwoDefaultMapper;
 import com.neil.mybatis.model.TestTable;
+import com.neil.mybatis.model.WoOrderState;
 import com.neil.mybatis.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,11 +24,14 @@ import java.util.Map;
 public class TestServiceImpl implements TestService {
 
     @Autowired
-    TestTableMapper testTableMapper;
+    OneDefaultMapper mysqlMapper;
+
+    @Autowired
+    TwoDefaultMapper oracleMapper;
 
     @Override
     public int addTestTable(TestTable testTable) {
-        return testTableMapper.addTestTable(testTable);
+        return mysqlMapper.addTestTable(testTable);
     }
 
     @Override
@@ -35,27 +40,32 @@ public class TestServiceImpl implements TestService {
         map.put("tableId", new SecureRandom().nextInt(10000));
         map.put("tableAction", "tableaction");
         map.put("tableName", "tableName");
-        return testTableMapper.addTestTable2(map);
+        return mysqlMapper.addTestTable2(map);
     }
 
     @Override
     public TestTable getTestTableById(int id) {
-        return testTableMapper.getTestTableById(id);
+        return mysqlMapper.getTestTableById(id);
     }
 
     @Override
     public List<TestTable> getTestTableByName(String name) {
-        return testTableMapper.getTestTableByName(name);
+        return mysqlMapper.getTestTableByName(name);
     }
 
     @Override
     public List<TestTable> getTestTable() {
-        return testTableMapper.getTestTable();
+        return mysqlMapper.getTestTable();
     }
 
     @Override
     public List<TestTable> getTestTableByOracle() {
-        return testTableMapper.getTestTableByOracle();
+        return oracleMapper.getTestTableByOracle();
+    }
+
+    @Override
+    public List<WoOrderState> getWoOrderStateByOracle() {
+        return oracleMapper.getWoOrderStateByOracle();
     }
 
     @Override
@@ -70,6 +80,6 @@ public class TestServiceImpl implements TestService {
             item.add(i);
         }
         //map.put("list", item);
-        return testTableMapper.dynamicSqlQuery(map);
+        return mysqlMapper.dynamicSqlQuery(map);
     }
 }

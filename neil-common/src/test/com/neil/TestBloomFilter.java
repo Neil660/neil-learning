@@ -4,8 +4,8 @@ import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
 /**
- * @Decription Bloom Filte
- * 由二进制矢量和一些列的hash函数组成，不存储key，存储的时通过hash函数转换的bit数组的值1
+ * @Decription Bloom Filter
+ * 由二进制矢量和一些列的hash函数组成，不存储key，存储时通过hash函数转换的bit数组的值1
  * 优点：空间效率和查询时间 缺点：有一定的误识别率和删除困难
  * 使用场景：①检查单子拼写正确性 ②检测海量名单嫌疑人 ③垃圾邮件过滤 ④索爬虫URL去重 ⑤缓存穿透过滤
  *

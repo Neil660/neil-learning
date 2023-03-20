@@ -1,7 +1,18 @@
 package com.neil.mybatis.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+
+import javax.sql.DataSource;
 
 /**
  * @Decription
@@ -13,15 +24,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringBootMybatisAutoConfiguration {
 
-    /**
-     * 将自定义的 Druid数据源添加到容器中，不再让 Spring Boot 自动创建
-     * 绑定全局配置文件中的 druid 数据源属性到 com.alibaba.druid.pool.DruidDataSource从而让它们生效
-     * @ConfigurationProperties：往com.alibaba.druid.pool.DruidDataSource中注入属性
-     * @return
-     */
-    /*@Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource druidDataSource() {
-        return new DruidDataSource();
-    }*/
+    @Primary
+    @Bean(name = "mysqldatasource")
+    @ConfigurationProperties("spring.datasource.druid.one")
+    public DataSource dataSourceOne() {
+        DruidDataSource druidDataSource = DruidDataSourceBuilder.create().build();
+        return druidDataSource;
+    }
+
+    @Bean(name = "oracledatasource")
+    @ConfigurationProperties("spring.datasource.druid.two")
+    public DataSource dataSourceTwo() {
+        DruidDataSource druidDataSource = DruidDataSourceBuilder.create().build();
+        return druidDataSource;
+    }
 }

@@ -1,6 +1,7 @@
-package com.neil.mybatis.dao;
+package com.neil.mybatis.dao.datasourcesone;
 
 import com.neil.mybatis.model.TestTable;
+import com.neil.mybatis.model.WoOrderState;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Map;
  * @Version 1.0
  */
 @Repository
-public interface TestTableMapper {
+public interface OneDefaultMapper {
     int addTestTable(TestTable testTable);
 
     int addTestTable2(Map<String, Object> map);
@@ -23,8 +24,6 @@ public interface TestTableMapper {
     List<TestTable> getTestTableByName(String name);
 
     List<TestTable> getTestTable();
-
-    List<TestTable> getTestTableByOracle();
 
     List<TestTable> dynamicSqlQuery(Map<String, Object> map);
 }

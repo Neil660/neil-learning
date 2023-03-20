@@ -19,6 +19,7 @@
         <module name="rocketmq-producers" />
         <module name="spring-aop" />
         <module name="spring-boot-mybatis" />
+        <module name="spring-boot-netty" />
         <module name="spring-boot-quartz" />
         <module name="spring-boot-redis" />
         <module name="spring-boot-redis-redission" />
@@ -39,6 +40,7 @@
       <module name="rocketmq-producers" target="1.8" />
       <module name="spring-aop" target="1.8" />
       <module name="spring-boot-mybatis" target="1.8" />
+      <module name="spring-boot-netty" target="1.8" />
       <module name="spring-boot-quartz" target="1.8" />
       <module name="spring-boot-redis" target="1.8" />
       <module name="spring-boot-redis-redission" target="1.8" />
@@ -59,6 +61,7 @@
       <module name="rocketmq-producers" options="-parameters" />
       <module name="spring-aop" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
+      <module name="spring-boot-netty" options="-parameters" />
       <module name="spring-boot-quartz" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
       <module name="spring-boot-redis-redission" options="-parameters" />

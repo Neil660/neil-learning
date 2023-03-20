@@ -1,6 +1,7 @@
 package com.neil.mybatis.controller;
 
 import com.neil.mybatis.model.TestTable;
+import com.neil.mybatis.model.WoOrderState;
 import com.neil.mybatis.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -60,15 +61,19 @@ public class TestController {
         return service.getTestTable();
     }
 
-    // TODO Oracle配置没加载进去
+    @GetMapping(value = "/get")
+    public List<TestTable> get() {
+        return service.get();
+    }
+
     @RequestMapping(value = "/getAllInfosByOracle")
     @ApiIgnore // 忽略
     public List<TestTable> getAllInfosByOracle() {
         return service.getTestTableByOracle();
     }
 
-    @GetMapping(value = "/get")
-    public List<TestTable> get() {
-        return service.get();
+    @RequestMapping(value = "/getWoOrderStateByOracle")
+    public List<WoOrderState> getWoOrderStateByOracle() {
+        return service.getWoOrderStateByOracle();
     }
 }

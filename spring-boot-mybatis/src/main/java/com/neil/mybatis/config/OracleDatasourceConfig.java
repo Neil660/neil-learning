@@ -20,22 +20,16 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 @Configuration
-@MapperScan(basePackages = "com.neil.mybatis.dao", sqlSessionFactoryRef = "oracleSqlSessionFactory")
+@MapperScan(basePackages = "com.neil.mybatis.dao.datasourcestwo", sqlSessionFactoryRef = "oracleSqlSessionFactory")
 public class OracleDatasourceConfig {
 
     // mybatis mapper扫描路径
     static final String MAPPER_LOCATION = "classpath:mapper/oracle/*.xml";
 
-    @Bean(name = "oracledatasource")
-    @ConfigurationProperties("spring.datasource.druid.oracle")
-    public DataSource oracleDataSource() {
-        return DruidDataSourceBuilder.create().build();
-    }
-
-    @Bean(name = "oracleTransactionManager")
+    /*@Bean(name = "oracleTransactionManager")
     public DataSourceTransactionManager oracleTransactionManager() {
         return new DataSourceTransactionManager(oracleDataSource());
-    }
+    }*/
 
     @Bean(name = "oracleSqlSessionFactory")
     public SqlSessionFactory oracleSqlSessionFactory(@Qualifier("oracledatasource") DataSource dataSource) throws Exception {

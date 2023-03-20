@@ -1,6 +1,7 @@
 package com.neil.mybatis.service;
 
 import com.neil.mybatis.model.TestTable;
+import com.neil.mybatis.model.WoOrderState;
 
 import java.util.List;
 
@@ -22,6 +23,8 @@ public interface TestService {
     List<TestTable> getTestTable();
 
     List<TestTable> getTestTableByOracle();
+
+    List<WoOrderState> getWoOrderStateByOracle();
 
     List<TestTable> get();
 }

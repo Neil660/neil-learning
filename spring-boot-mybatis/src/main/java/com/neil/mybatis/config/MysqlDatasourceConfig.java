@@ -21,24 +21,17 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 @Configuration
-@MapperScan(basePackages = "com.neil.mybatis.dao", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
+@MapperScan(basePackages = "com.neil.mybatis.dao.datasourcesone", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
 public class MysqlDatasourceConfig {
 
     // mybatis mapper扫描路径
     static final String MAPPER_LOCATION = "classpath:mapper/mysql/*.xml";
 
-    @Primary
-    @Bean(name = "mysqldatasource")
-    @ConfigurationProperties("spring.datasource.druid.mysql")
-    public DataSource mysqlDataSource() {
-        return DruidDataSourceBuilder.create().build();
-    }
-
-    @Bean(name = "mysqlTransactionManager")
+    /*@Bean(name = "mysqlTransactionManager")
     @Primary
     public DataSourceTransactionManager mysqlTransactionManager() {
         return new DataSourceTransactionManager(mysqlDataSource());
-    }
+    }*/
 
     @Bean(name = "mysqlSqlSessionFactory")
     @Primary
