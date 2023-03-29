@@ -1,6 +1,8 @@
 package com.neil.redis.dao.impl;
 
+import com.neil.aware.ServiceLocator;
 import com.neil.redis.dao.RedisDefaultIDao;
+import com.neil.redis.utils.ProtoStuffSerializeUtil;
 import com.neil.redis.utils.SeriallizeUtil;
 import com.neil.utils.Tools;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -18,27 +21,38 @@ import java.nio.charset.StandardCharsets;
  */
 @Component
 public class RedisDefaultIDaoImpl implements RedisDefaultIDao {
-    private static SeriallizeUtil seriallizeUtil;
+    @Autowired
+    private ProtoStuffSerializeUtil seriallizeUtil;
 
     @Autowired
     private RedisTemplate<String, byte[]> redisTemplate;
 
     @Override
-    public void setObj(final String key, final Object value) {
-        redisTemplate.opsForValue().set(key, value.toString().getBytes(StandardCharsets.UTF_8));
-    }
-
-    @Override
-    public Object getObj(final String key) {
-        return redisTemplate.opsForValue().get(key);
+    public int setEx(final String key, final Object value) {
+        try {
+            return (Integer) redisTemplate.execute((RedisCallback<Object>) connection -> {
+                connection.setEx(key.getBytes(StandardCharsets.UTF_8), 1 * 24 * 60 * 60, seriallizeUtil.objectToByte(value));
+                return 1;
+            });
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     @Override
     public int setEx(final String key, final Object value, long time) {
-        return (Integer) redisTemplate.execute((RedisCallback<Object>) connection -> {
-            connection.setEx(key.getBytes(StandardCharsets.UTF_8), time, seriallizeUtil.objectToByte(value));
-            return 1;
-        });
+        try {
+            return (Integer) redisTemplate.execute((RedisCallback<Object>) connection -> {
+                connection.setEx(key.getBytes(StandardCharsets.UTF_8), time, seriallizeUtil.objectToByte(value));
+                return 1;
+            });
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     @Override
@@ -92,8 +106,4 @@ public class RedisDefaultIDaoImpl implements RedisDefaultIDao {
         delete(lock);
     }
 
-
-    public void setSeriallizeUtil(SeriallizeUtil seriallizeUtil) {
-        this.seriallizeUtil = seriallizeUtil;
-    }
 }

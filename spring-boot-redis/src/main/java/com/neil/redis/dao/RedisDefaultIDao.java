@@ -9,9 +9,8 @@ import java.io.UnsupportedEncodingException;
  * @Version 1.0
  */
 public interface RedisDefaultIDao {
-    void setObj(final String key, final Object value) throws UnsupportedEncodingException;
-    Object getObj(final String key);
 
+    int setEx(final String key, final Object value);
     /**
      * 缓存一个对象带超时时间
      * @param key

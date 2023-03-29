@@ -17,7 +17,7 @@ import org.springframework.data.redis.core.RedisTemplate;
  */
 @Configuration
 @EnableConfigurationProperties(value = {ClusterConfigurationProperties.class})
-@ConditionalOnProperty(name = "spring.redis.type", havingValue = "cluster")
+@ConditionalOnProperty(name = "spring.redis.type", havingValue = "cluster", matchIfMissing = false)
 public class RedisClusterConfig {
 
     @Bean

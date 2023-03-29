@@ -47,6 +47,9 @@
         <option value="$PROJECT_DIR$/spring-boot-admin/admin-server/pom.xml" />
         <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-client/pom.xml" />
       </list>
     </option>
   </component>

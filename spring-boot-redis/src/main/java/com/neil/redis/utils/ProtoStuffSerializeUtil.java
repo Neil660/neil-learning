@@ -6,6 +6,7 @@ import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @Version 1.0
  */
 @Slf4j
+@Component
 public class ProtoStuffSerializeUtil implements SeriallizeUtil {
     /**
      * 避免每次序列化都重新申请Buffer空间

@@ -31,18 +31,15 @@ public class TestController {
     @RequestMapping("/addToRedis/{k}")
     public void addToRedis(@PathVariable String k) {
         try {
-            redisDefaultIDao.setObj(k, "value-" + k);
+            redisDefaultIDao.setEx(k, "value-" + k);
         }
-        catch (UnsupportedEncodingException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
-
     @RequestMapping("/getFromRedis/{k}")
     public String getFromRedis(@PathVariable String k) {
-        String result = "";
-        result = (String) redisDefaultIDao.getObj(k);
-        return result;
+        return redisDefaultIDao.readObject(k, String.class);
     }
 
     @RequestMapping("/add")

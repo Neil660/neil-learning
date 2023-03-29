@@ -85,7 +85,7 @@
         <module>spring-boot-kafka/kafka-producers</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-quartz</module>
-        <module>spring-boot-redis</module>
+        <!--<module>spring-boot-redis</module>-->
         <module>spring-boot-rocketmq/rocketmq-consumer</module>
         <module>spring-boot-rocketmq/rocketmq-producers</module>
     </modules>

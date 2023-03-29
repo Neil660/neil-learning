@@ -15,6 +15,8 @@
         <module name="kafka-producers" />
         <module name="multi-threaded-technology" />
         <module name="neil-common" />
+        <module name="rabbitmq-consumer" />
+        <module name="rabbitmq-producers" />
         <module name="rocketmq-consumer" />
         <module name="rocketmq-producers" />
         <module name="spring-aop" />
@@ -36,6 +38,8 @@
       <module name="multi-threaded-technology" target="1.8" />
       <module name="neil" target="1.8" />
       <module name="neil-common" target="1.8" />
+      <module name="rabbitmq-consumer" target="1.8" />
+      <module name="rabbitmq-producers" target="1.8" />
       <module name="rocketmq-consumer" target="1.8" />
       <module name="rocketmq-producers" target="1.8" />
       <module name="spring-aop" target="1.8" />
@@ -57,6 +61,8 @@
       <module name="kafka-producers" options="-parameters" />
       <module name="multi-threaded-technology" options="-parameters" />
       <module name="neil-common" options="-parameters" />
+      <module name="rabbitmq-consumer" options="-parameters" />
+      <module name="rabbitmq-producers" options="-parameters" />
       <module name="rocketmq-consumer" options="-parameters" />
       <module name="rocketmq-producers" options="-parameters" />
       <module name="spring-aop" options="-parameters" />
