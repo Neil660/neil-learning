@@ -57,14 +57,14 @@ public class TestRunner {
     private final AtomicInteger runs = new AtomicInteger(0);
     private final int iterations;
     private final int thinkTime;
-    private final Method createHelper;
+    private final Method actorMethod;
     private final Method observerMethod;
     private volatile Method setupMethod = null;
     private final Object testCase;
     private final SortedMap<Integer, ExpectInfo> expectMap;
 
-    public TestRunner(Method createHelper, Method observerMethod, Method setupMethod, Object testCase) {
-        this.createHelper = createHelper;
+    public TestRunner(Method actorMethod, Method observerMethod, Method setupMethod, Object testCase) {
+        this.actorMethod = actorMethod;
         this.observerMethod = observerMethod;
         this.setupMethod = setupMethod;
         this.testCase = testCase;
@@ -100,12 +100,12 @@ public class TestRunner {
 
     public static void runTest(Class<?> testCaseClazz) throws InstantiationException, IllegalAccessException {
         Object test = testCaseClazz.newInstance();
-        Method createHelper = null;
+        Method actorMethod = null;
         Method observerMethod = null;
         Method setupMethod = null;
         for (Method method : testCaseClazz.getMethods()) {
             if (method.getAnnotation(Actor.class) != null) {
-                createHelper = method;
+                actorMethod = method;
                 continue;
             }
             if (method.getAnnotation(Observer.class) != null) {
@@ -118,7 +118,7 @@ public class TestRunner {
             }
         }
 
-        TestRunner runner = new TestRunner(createHelper, observerMethod, setupMethod, test);
+        TestRunner runner = new TestRunner(actorMethod, observerMethod, setupMethod, test);
         runner.doTest();
     }
 
@@ -142,7 +142,7 @@ public class TestRunner {
             @Override
             public void run() {
                 try {
-                    createHelper.invoke(testCase, new Object[]{});
+                    actorMethod.invoke(testCase, new Object[]{});
                 }
                 catch (IllegalAccessException e) {
                     e.printStackTrace();

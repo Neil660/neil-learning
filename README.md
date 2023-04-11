@@ -31,10 +31,29 @@ springboot整合AOP切面实现，配合自定义注解
 
 springboot整合Mybatis、Druid多数据源、eureka客户端、swagger2
 
+## spring-boot-netty
+修改启动类的run方法，可以决定用哪个服务测试
+
+time服务time包下的，启动客户端：com.neil.netty.TimeClient，整个流程：客户端建立连接后，会收到服务端发来的"channel active"，随后客户端发送一段字符串给服务端，服务端收到后会打印在控制台，结束。
+
+普通服务（参考了RocketMQ源码编写的用例），启动客户端：com.neil.netty.NettyTest.main，整个流程：客户端连接后同步发送一个自定义的消息，服务端收到消息后回复一个消息，结束。
+
 ## spring-boot-quartz
 Quart任务进度管理器（定时任务），框架化
 
 官网：http://quartz-scheduler.org/
+
+## spring-boot-rabbitmq
+前置条件：启动rabbitmq服务器
+
+springboot官网：https://docs.spring.io/spring-boot/docs/2.7.9/reference/html/messaging.html#messaging.amqp.rabbitmq
+基于AMQP协议的rabbitmq官网：
+https://www.rabbitmq.com/admin-guide.html
+
+https://www.rabbitmq.com/clients.html
+
+rabbit-producers：生产者
+rabbit-consumer：消费者
 
 ## spring-boot-redis
 前置条件：存在redis单机或集群服务器
