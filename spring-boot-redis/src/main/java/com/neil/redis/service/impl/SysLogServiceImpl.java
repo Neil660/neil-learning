@@ -6,6 +6,7 @@ import com.neil.redis.service.SysLogService;
 import com.neil.redis.dao.SysLogDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -58,5 +59,10 @@ public class SysLogServiceImpl implements SysLogService {
     @Override
     public SysLog getSysLogById(int id) {
         return sysLogDao.getSysLogById(id);
+    }
+
+    @Override
+    public void trans() {
+        sysLogDao.trans();
     }
 }

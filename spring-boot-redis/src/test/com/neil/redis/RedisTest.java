@@ -1,11 +1,19 @@
 package com.neil.redis;
 
+import com.neil.redis.dao.RedisDefaultIDao;
 import com.neil.redis.model.SysLog;
 import com.neil.redis.utils.ProtoStuffSerializeUtil;
 import com.neil.redis.utils.ByteStreamSerializeUtil;
+import com.neil.utils.Tools;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,17 +24,28 @@ import java.util.List;
  * @Date 2023/3/1 14:19
  * @Version 1.0
  */
-
-public class Test {
+@Slf4j
+@RunWith(SpringRunner.class)
+@SpringBootTest(args = "--spring.profiles.active=local")
+public class RedisTest {
     @Autowired
     private RedisTemplate redisTemplate;
     @Autowired
     private RedisConnectionFactory connectionFactory;
 
-    @org.junit.Test
-    public void test1() {
+    @Autowired
+    RedisDefaultIDao redisDefaultIDao;
 
-        System.out.println();
+    @Test
+    public void test1() {
+        String lock = "NEIL-test-1";
+        redisDefaultIDao.unLock(lock);
+        long expire = 3;
+        boolean first = redisDefaultIDao.tryLock(lock, expire);
+        Tools.sleep(2 * 1000);
+        boolean second = redisDefaultIDao.tryLock(lock, expire);
+        log.info("第一次申请锁：" + first);
+        log.info("第二次申请锁：" + second);
     }
 
 

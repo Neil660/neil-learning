@@ -67,4 +67,10 @@ public class TestController {
     public SysLog getSysLogById(@PathVariable int id) {
         return sysLogService.getSysLogById(id);
     }
+
+    @RequestMapping(value = "/trans")
+    public void trans() {
+        sysLogService.trans();
+    }
+
 }

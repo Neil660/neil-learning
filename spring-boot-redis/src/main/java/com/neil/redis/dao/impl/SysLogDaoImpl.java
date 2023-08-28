@@ -10,6 +10,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +24,8 @@ import java.util.List;
 @Repository
 public class SysLogDaoImpl implements SysLogDao {
     private final static String fields = "ID,USERNAME,OPERATION,TIME,METHOD,PARAMS,IP,CREATE_TIME";
+
+    private static int count = 3;
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -98,4 +101,14 @@ public class SysLogDaoImpl implements SysLogDao {
     @CacheEvict(value = "getAllSysLog", allEntries = true)
     @Override
     public void refreshGetSysLogById() { }
+
+    @Transactional
+    @Override
+    public void trans() {
+        String sql1 = "update sys_log set username=? where id=?";
+        String sql2 = "update sys_log set username=? where id=?";
+        this.jdbcTemplate.update(sql1, "曹军" + count, 96);
+        this.jdbcTemplate.update(sql1, "曹军xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" + count, 47);
+        count++;
+    }
 }

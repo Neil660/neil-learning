@@ -3,10 +3,12 @@ package com.neil.spring.aop.dao.impl;
 import com.neil.spring.aop.model.SysLog;
 import com.neil.spring.aop.dao.SysLogDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 /**
@@ -21,6 +23,11 @@ public class SysLogDaoImpl implements SysLogDao {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
 
     @Override
     public int addSysLog(SysLog sysLog) {

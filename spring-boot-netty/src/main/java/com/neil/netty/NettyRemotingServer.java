@@ -50,8 +50,10 @@ public class NettyRemotingServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     public void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline()
-                                .addLast(new NettyEncoder(), new NettyDecoder(), new NettyServerHandler());
+                        ch.pipeline().addLast(
+                                new NettyEncoder(),
+                                new NettyDecoder(),
+                                new NettyServerHandler());
                     }
                 });
 

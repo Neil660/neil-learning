@@ -21,4 +21,6 @@ public interface SysLogService {
     List<SysLog> getAllSysLog();
 
     SysLog getSysLogById(int id);
+
+    void trans();
 }

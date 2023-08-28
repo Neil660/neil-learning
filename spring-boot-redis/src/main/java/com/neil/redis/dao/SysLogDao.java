@@ -26,4 +26,6 @@ public interface SysLogDao {
     SysLog getSysLogById(int id);
 
     void refreshGetSysLogById();
+
+    void trans();
 }
