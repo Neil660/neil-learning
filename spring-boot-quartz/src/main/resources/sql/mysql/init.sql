@@ -11,4 +11,5 @@ CREATE TABLE `task_entity`  (
   PRIMARY KEY (`job_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-INSERT INTO `task_entity`(`job_id`, `job_group_id`, `job_name`, `bean_name`, `params`, `cron_expr`, `before_job_id`, `status`) VALUES (1, 1, 'print-Task', 'printTask', NULL, '0/5 * * * * ?', NULL, 0);
+INSERT INTO `task_entity`(`job_id`, `job_group_id`, `job_name`, `bean_name`, `params`, `cron_expr`, `before_job_id`, `status`) VALUES (1, 1, 'print-Task', 'printTask', NULL, '0/30 * * * * ? ', NULL, 0);
+INSERT INTO `task_entity`(`job_id`, `job_group_id`, `job_name`, `bean_name`, `params`, `cron_expr`, `before_job_id`, `status`) VALUES (2, 1, 'print-Task2', 'printTask2', NULL, '0/30 * * * * ? ', NULL, 0);

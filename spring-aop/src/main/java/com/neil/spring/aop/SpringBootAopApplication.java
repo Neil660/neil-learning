@@ -17,5 +17,7 @@ public class SpringBootAopApplication {
         // 查看使用的代理模式
         /*UserService userService = context.getBean(UserService.class);
         userService.work();*/
+
+        System.out.println();
     }
 }

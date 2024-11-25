@@ -88,6 +88,8 @@
         <!--<module>spring-boot-redis</module>-->
         <module>spring-boot-rocketmq/rocketmq-consumer</module>
         <module>spring-boot-rocketmq/rocketmq-producers</module>
+        <module>spring-boot-ehcache</module>
+        <module>network-protocol</module>
     </modules>
 
     <build>

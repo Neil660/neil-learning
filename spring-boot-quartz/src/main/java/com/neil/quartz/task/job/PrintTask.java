@@ -29,8 +29,7 @@ public class PrintTask extends Task {
      */
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        // 3秒打印一次的任务
         log.info("Print===============================, name：PrintTask");
-        Tools.sleep(5 * 1000L);
+        //Tools.sleep(20 * 1000L);
     }
 }

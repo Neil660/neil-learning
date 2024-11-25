@@ -1,7 +1,7 @@
 package com.neil.multi.thread.example.case0;
 
 /**
- * @Decription
+ * @Decription 线程等待与唤醒
  * @Author NEIL
  * @Date 2023/1/7 22:43
  * @Version 1.0

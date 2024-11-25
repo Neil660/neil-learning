@@ -11,7 +11,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
  * @Version 1.0
  */
 @Configuration
-public class AutoConfiguration {
+public class QuartzAutoConfiguration {
 
     @Bean("schedulerManager")
     public SchedulerFactoryBean getSchedulerManager() {

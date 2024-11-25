@@ -32,8 +32,6 @@ public final class TaskManager {
 
     private TaskTrigger taskTrigger;
 
-    private Map<Integer, TaskEntity> taskCache = new ConcurrentHashMap<>();
-
     public TaskTrigger getTaskTrigger() {
         return taskTrigger;
     }
@@ -57,6 +55,7 @@ public final class TaskManager {
 
     public void init() {
         try {
+            // 根据分组来执行定时任务
             String groupIds = System.getProperty("TASK_GROUP_ID");
             if (StringUtils.isNullOrEmpty(groupIds)) {
                 groupIds = "1";
@@ -68,27 +67,17 @@ public final class TaskManager {
                 groupId.add(Integer.valueOf(split[i]));
             }
 
-            // 从缓存取
-            if (!taskCache.isEmpty()) {
-                for (Entry<Integer, TaskEntity> entityEntry : taskCache.entrySet()) {
-                    if (groupId.contains(entityEntry.getKey())) {
-                        taskNeedToRun.add(entityEntry.getValue());
-                    }
-                }
-            }
-            else {
-                String sql = "select job_id,job_group_id,job_name,bean_name,params,cron_expr,before_job_id,status " +
-                        "from task_entity where status = 0";
-                List<TaskEntity> taskEntities = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(TaskEntity.class));
-                for (TaskEntity entity : taskEntities) {
-                    int currGroupId = entity.getJobGroupId();
-                    taskCache.put(currGroupId, entity);
-                    if (groupId.contains(currGroupId)) {
-                        taskNeedToRun.add(entity);
-                    }
+            String sql = "select job_id,job_group_id,job_name,bean_name,params,cron_expr,before_job_id,status " +
+                    "from task_entity where status = 0";
+            List<TaskEntity> taskEntities = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(TaskEntity.class));
+            for (TaskEntity entity : taskEntities) {
+                int currGroupId = entity.getJobGroupId();
+                if (groupId.contains(currGroupId)) {
+                    taskNeedToRun.add(entity);
                 }
             }
 
+            // 开始执行
             for (TaskEntity entity : taskNeedToRun) {
                 taskTrigger.cronTrigger(entity);
             }

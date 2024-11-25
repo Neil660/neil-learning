@@ -30,7 +30,6 @@ public class SpringTaskTrigger implements TaskTrigger {
      * 1. MethodInvokingJobDetailFactoryBean
      * 2. JobDetailFactoryBean
      * @param taskEntity
-     * @throws Exception
      */
     @Override
     public void cronTrigger(TaskEntity taskEntity) {

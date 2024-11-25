@@ -10,9 +10,14 @@ import org.springframework.stereotype.Service;
  * @Version 1.0
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService, Cloneable {
     @Override
     public void work() {
         System.out.println("UserService is working...");
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return (UserServiceImpl) super.clone();
     }
 }
