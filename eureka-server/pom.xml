@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>${springboot.version}</version>
+            <version>${eureka.version}</version>
         </dependency>
     </dependencies>
 

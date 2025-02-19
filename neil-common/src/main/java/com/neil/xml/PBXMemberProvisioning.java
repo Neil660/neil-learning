@@ -187,14 +187,15 @@ public class PBXMemberProvisioning {
         return "CMD_PARAM[GROUP_ID]";
     }
     public String getUserType() {
-        return "CMD_PARAM[USER_TYPE]";
+        return null;
     }
     public String getNetworkType() {
         return "CMD_PARAM[NETWORK_TYPE]";
     }
     public String getTerminalType() {
         return "CMD_PARAM[TERMINAL_TYPE]";
-    }public String getPrivateNumberRange() {
+    }
+    public String getPrivateNumberRange() {
         return "CMD_PARAM[PRIVATE_NUM_RANGE]";
     }
     public String getPublicNumberRange() {

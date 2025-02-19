@@ -7,48 +7,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="multi-threaded-technology" />
         <module name="admin-client" />
-        <module name="admin-server" />
-        <module name="design-pattern" />
-        <module name="eureka-server" />
+        <module name="rabbitmq-consumer" />
+        <module name="rocketmq-producers" />
+        <module name="spring-boot-redis" />
         <module name="kafka-consumer" />
         <module name="kafka-producers" />
-        <module name="multi-threaded-technology" />
-        <module name="neil-common" />
-        <module name="rabbitmq-consumer" />
-        <module name="rabbitmq-producers" />
-        <module name="rocketmq-consumer" />
-        <module name="rocketmq-producers" />
-        <module name="spring-aop" />
         <module name="spring-boot-mybatis" />
         <module name="spring-boot-netty" />
-        <module name="spring-boot-quartz" />
-        <module name="spring-boot-redis" />
+        <module name="eureka-server" />
+        <module name="spring-boot-ehcache" />
+        <module name="design-pattern" />
+        <module name="rocketmq-consumer" />
         <module name="spring-boot-redis-redission" />
+        <module name="neil-common" />
+        <module name="spring-boot-quartz" />
+        <module name="admin-server" />
         <module name="spring-security" />
+        <module name="spring-aop" />
+        <module name="rabbitmq-producers" />
+        <module name="network-protocol" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="admin-client" target="1.8" />
-      <module name="admin-server" target="1.8" />
-      <module name="design-pattern" target="1.8" />
-      <module name="eureka-server" target="1.8" />
-      <module name="kafka-consumer" target="1.8" />
-      <module name="kafka-producers" target="1.8" />
-      <module name="multi-threaded-technology" target="1.8" />
-      <module name="neil" target="1.8" />
-      <module name="neil-common" target="1.8" />
       <module name="rabbitmq-consumer" target="1.8" />
       <module name="rabbitmq-producers" target="1.8" />
-      <module name="rocketmq-consumer" target="1.8" />
-      <module name="rocketmq-producers" target="1.8" />
-      <module name="spring-aop" target="1.8" />
-      <module name="spring-boot-mybatis" target="1.8" />
-      <module name="spring-boot-netty" target="1.8" />
-      <module name="spring-boot-quartz" target="1.8" />
-      <module name="spring-boot-redis" target="1.8" />
-      <module name="spring-boot-redis-redission" target="1.8" />
-      <module name="spring-security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -61,11 +45,13 @@
       <module name="kafka-producers" options="-parameters" />
       <module name="multi-threaded-technology" options="-parameters" />
       <module name="neil-common" options="-parameters" />
+      <module name="network-protocol" options="-parameters" />
       <module name="rabbitmq-consumer" options="-parameters" />
       <module name="rabbitmq-producers" options="-parameters" />
       <module name="rocketmq-consumer" options="-parameters" />
       <module name="rocketmq-producers" options="-parameters" />
       <module name="spring-aop" options="-parameters" />
+      <module name="spring-boot-ehcache" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
       <module name="spring-boot-netty" options="-parameters" />
       <module name="spring-boot-quartz" options="-parameters" />
