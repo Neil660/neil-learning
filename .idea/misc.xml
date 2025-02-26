@@ -19,6 +19,7 @@
     <option name="pathToUserRulesConfiguration" value="" />
     <option name="pathToJarWithRules" value="" />
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />
     <option name="effort" value="default" />
@@ -50,6 +51,7 @@
         <option value="$PROJECT_DIR$/rabbitmq-client/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-server/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-mybatis-plus/pom.xml" />
       </list>
     </option>
   </component>
