@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-admin/admin-client/admin-client.iml" filepath="$PROJECT_DIR$/spring-boot-admin/admin-client/admin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-admin/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/spring-boot-admin/admin-server/admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/kafka-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/kafka-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-kafka/kafka-producers/kafka-producers.iml" filepath="$PROJECT_DIR$/spring-boot-kafka/kafka-producers/kafka-producers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multi-threaded-technology/multi-threaded-technology.iml" filepath="$PROJECT_DIR$/multi-threaded-technology/multi-threaded-technology.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neil.iml" filepath="$PROJECT_DIR$/neil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neil-common/neil-common.iml" filepath="$PROJECT_DIR$/neil-common/neil-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-consumer/rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-consumer/rabbitmq-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-producers/rabbitmq-producers.iml" filepath="$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-producers/rabbitmq-producers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/rocketmq-consumer.iml" filepath="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/rocketmq-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/rocketmq-producers.iml" filepath="$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/rocketmq-producers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mybatis/spring-boot-mybatis.iml" filepath="$PROJECT_DIR$/spring-boot-mybatis/spring-boot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-netty/spring-boot-netty.iml" filepath="$PROJECT_DIR$/spring-boot-netty/spring-boot-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-quartz/spring-boot-quartz.iml" filepath="$PROJECT_DIR$/spring-boot-quartz/spring-boot-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" filepath="$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis-redission/spring-boot-redis-redission.iml" filepath="$PROJECT_DIR$/spring-boot-redis-redission/spring-boot-redis-redission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security/spring-security.iml" filepath="$PROJECT_DIR$/spring-security/spring-security.iml" />
     </modules>
   </component>
 </project>

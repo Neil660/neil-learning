@@ -23,7 +23,7 @@ springboot整合AOP切面实现，配合自定义注解
 
 后期加入Spring Security进行安全控制，那么访问admin-server的控制台和client都需要进行账号和密码才能进行连接；后期加入客户端挂了后的电子邮件通知
 
-## spring-security
+## spring-sucurity
 添加中。。。
 
 ## spring-boot-mybatis

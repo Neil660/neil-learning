@@ -1,66 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/design-pattern/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/multi-threaded-technology" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/multi-threaded-technology/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/multi-threaded-technology/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neil-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neil-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neil-common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/network-protocol/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/network-protocol/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-aop" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-aop/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-aop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-admin/admin-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-ehcache/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-ehcache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-consumer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-producers" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-producers/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-kafka/kafka-producers/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-mybatis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-netty" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-netty/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-netty/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-quartz" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-quartz/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-quartz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-rabbitmq/rabbitmq-producers" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-redis-redission" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-redis-redission/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-redis-redission/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-redis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-rocketmq/rocketmq-producers/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-security" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-security/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-security/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
