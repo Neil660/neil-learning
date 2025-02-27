@@ -25,6 +25,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://baomidou.com/getting-started/ -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
