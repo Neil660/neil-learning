@@ -31,7 +31,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>neil</name>
     <description>Learning project for Spring Cloud</description>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>

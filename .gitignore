@@ -1,0 +1,21 @@
+# IDE files
+.idea/
+# 没有斜杠的模式，会匹配所有的层级
+*.iml
+*.iws
+*.ipr
+
+# Maven/Gradle build directories
+# 匹配所有层级的 target 目录
+target/
+# 只匹配根目录的 target 目录
+/target/
+build/
+out/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
